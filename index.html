@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kopi Gunung Lestari</title>
+  <meta name="description" content="Kopi Gunung versi simple: Home, Profil, Produk, dan Kontak Kami.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-a:#2b1a10;
+      --bg-b:#140d08;
+      --accent:#e7a663;
+      --accent-2:#c9823d;
+      --text:#fbf7f2;
+      --muted:#e8d7c5;
+    }
+    html,body{scroll-behavior:smooth}
+    body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  </style>
+</head>
+<body class="min-h-screen bg-[radial-gradient(900px_600px_at_85%_-10%,#3a2316,transparent_60%),linear-gradient(180deg,var(--bg-a),var(--bg-b))] text-[var(--text)]">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-black/25 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <a href="#home" class="flex items-center gap-3">
+          <span class="inline-flex w-9 h-9 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] text-[#2a170c]">
+            <!-- Bean icon -->
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true">
+              <path d="M16.6 2.7c-3.3-2.2-7.5-2-10.4.6-4 3.3-5 9.4-2 14.2 3 4.8 9.1 6.5 13.5 2.9 2.3-1.9 3.7-4.7 3.8-7.5.1-3.2-1.4-6.2-4-8.1l-1 1.3c2.2 1.6 3.4 4.1 3.3 6.7-.1 2.3-1.2 4.5-3.1 6-3.7 3.2-9.4 2-12.1-2.7-2.3-3.9-1.4-8.8 1.9-11.5 2.4-2 5.8-2.1 8.4-.5l1.1-1.3z"/>
+            </svg>
+          </span>
+          <div class="leading-tight">
+            <div class="font-extrabold">Kopi Gunung Lestari</div>
+            <a href="https://www.kopigununglestari.id" target="_blank" rel="noopener noreferrer" class="text-xs text-[var(--muted)] hover:text-[var(--accent)]">www.kopigunung.id</a>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#home" class="text-sm text-[var(--muted)] hover:text-[var(--text)] py-2">Home</a>
+          <a href="#profil" class="text-sm text-[var(--muted)] hover:text-[var(--text)] py-2">Profil</a>
+          <a href="#produk" class="text-sm text-[var(--muted)] hover:text-[var(--text)] py-2">Produk</a>
+          <a href="#kontak" class="text-sm text-[var(--muted)] hover:text-[var(--text)] py-2">Kontak Kami</a>
+        </nav>
+
+        <button id="menuBtn" aria-label="Buka menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-white/15 hover:bg-white/10">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+
+      <div id="mobileNav" class="md:hidden hidden pb-3">
+        <div class="grid gap-1.5">
+          <a href="#home" class="block px-3 py-2 rounded-lg hover:bg-white/10 text-[var(--muted)] hover:text-[var(--text)]">Home</a>
+          <a href="#profil" class="block px-3 py-2 rounded-lg hover:bg-white/10 text-[var(--muted)] hover:text-[var(--text)]">Profil</a>
+          <a href="#produk" class="block px-3 py-2 rounded-lg hover:bg-white/10 text-[var(--muted)] hover:text-[var(--text)]">Produk</a>
+          <a href="#kontak" class="block px-3 py-2 rounded-lg hover:bg-white/10 text-[var(--muted)] hover:text-[var(--text)]">Kontak Kami</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center py-14 md:py-20">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Hanya contoh</h1>
+          <p class="mt-4 text-[var(--muted)]">Halo saya fathur</p>
+          <div class="mt-7 flex items-center gap-3">
+            <a href="#produk" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-[#2a170c] bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] hover:brightness-95">
+              Lihat Produk
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#profil" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold border border-white/15 hover:bg-white/10">
+              Profil
+            </a>
+          </div>
+        </div>
+        <div class="rounded-3xl p-6 border border-white/10 bg-white/5">
+
+<img src="img/pppp.png" alt="Kopi Gunung" class="w-full h-auto rounded-lg">
+
+<p class="mt-3 text-sm text-[var(--muted)] text-center">Rasa konsisten tanpa ribet.</p>
+</div>
+ </div> 
+</div>
+
+ </section>
+  <!-- Profil -->
+  <section id="profil" class="py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="rounded-3xl p-6 md:p-8 border border-white/10 bg-white/5">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Profil</h2>
+        <p class="mt-3 text-[var(--muted)]">
+          POLINES JAYA JAYA JAYA.
+        </p>
+        <div class="mt-6 grid sm:grid-cols-3 gap-4">
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="text-2xl">🫘</div>
+            <div class="font-semibold mt-1">Single & Blend</div>
+            <div class="text-xs text-[var(--muted)]">Pilihan rasa untuk berbagai selera.</div>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="text-2xl">🔥</div>
+            <div class="font-semibold mt-1">Sangrai Segar</div>
+            <div class="text-xs text-[var(--muted)]">Batch kecil, kontrol rasa.</div>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="text-2xl">🤝</div>
+            <div class="font-semibold mt-1">Dari alam</div>
+            <div class="text-xs text-[var(--muted)]">Jejak asal jelas.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk -->
+<section id="produk" class="py-14 md:py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-end justify-between">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Produk</h2>
+      <a href="#kontak" class="text-sm text-[var(--muted)] hover:text-[var(--text)]">Butuh rekomendasi?</a>
+    </div>
+
+    <div class="mt-7 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1: Robusta -->
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-5 flex flex-col">
+        <div class="text-sm text-[var(--muted)]">Single Origin</div>
+        <h3 class="mt-1 font-bold">ROBUSTA</h3>
+        <!-- Gambar yang diunggah untuk Robusta -->
+        <div class="mt-3 aspect-[5/3] rounded-lg bg-gradient-to-br from-[#5b3a25] to-[#2f1c12] grid place-items-center">
+          <img src="img/P11 (1).jpg" alt="Robusta Coffee Image" class="w-full h-auto rounded-lg" />
+        </div>
+        <p class="mt-3 text-sm text-[var(--muted)]">Cokelat susu, karamel, body medium.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-extrabold">Rp 55.000</div>
+          <button class="buyBtn px-3 py-2 text-sm font-bold rounded-lg border border-white/15 hover:bg-white/10" data-name="Arjuna Medium Roast">Beli</button>
+        </div>
+      </article>
+
+      <!-- Card 2: Arabica -->
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-5 flex flex-col">
+        <div class="text-sm text-[var(--muted)]">Blend</div>
+        <h3 class="mt-1 font-bold">ARABICA</h3>
+        <!-- Gambar yang diunggah untuk Arabica -->
+        <div class="mt-3 aspect-[5/3] rounded-lg bg-gradient-to-br from-[#70472d] to-[#2e1b11] grid place-items-center">
+          <img src="img/P11 (2).jpg" alt="Arabica Coffee Image" class="w-full h-auto rounded-lg" />
+        </div>
+        <p class="mt-3 text-sm text-[var(--muted)]">Seimbang, enak untuk harian.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-extrabold">Rp 49.000</div>
+          <button class="buyBtn px-3 py-2 text-sm font-bold rounded-lg border border-white/15 hover:bg-white/10" data-name="Lereng Timur Blend">Beli</button>
+        </div>
+      </article>
+
+      <!-- Card 3: Toraja -->
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-5 flex flex-col">
+        <div class="text-sm text-[var(--muted)]">Single Origin</div>
+        <h3 class="mt-1 font-bold">TORAJA</h3>
+        <!-- Gambar yang diunggah untuk Toraja -->
+        <div class="mt-3 aspect-[5/3] rounded-lg bg-gradient-to-br from-[#7a4d31] to-[#3a2416] grid place-items-center">
+          <img src="img/P11 (3).jpg" alt="Toraja Coffee Image" class="w-full h-auto rounded-lg" />
+        </div>
+        <p class="mt-3 text-sm text-[var(--muted)]">Cerah, manis, pour-over.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-extrabold">Rp 100.000</div>
+          <button class="buyBtn px-3 py-2 text-sm font-bold rounded-lg border border-white/15 hover:bg-white/10" data-name="Sindoro Light Roast">Beli</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Info strip -->
+      <div id="miniInfo" class="hidden mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm">
+        Terakhir ditambahkan: <span id="lastItem" class="text-[var(--muted)]"></span>
+        <button id="clearInfo" class="ml-3 px-2 py-1 text-xs rounded border border-white/15 hover:bg-white/10">Bersihkan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak Kami -->
+  <section id="kontak" class="py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="rounded-3xl p-6 md:p-8 border border-white/10 bg-white/5">
+          <h2 class="text-2xl md:text-3xl font-extrabold">Kontak Kami</h2>
+          <p class="mt-3 text-[var(--muted)]">Tanyakan apa saja atau minta penawaran grosir. Ini adalah formulir demo dan akan menampilkan notifikasi di halaman.</p>
+
+          <form id="contactForm" class="mt-6 grid gap-4">
+            <div>
+              <label class="block text-sm mb-1">Nama</label>
+              <input required type="text" name="nama" class="w-full rounded-xl px-4 py-3 bg-white/10 border border-white/15 outline-none focus:border-[var(--accent)]" placeholder="Nama lengkap">
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Email</label>
+              <input required type="email" name="email" class="w-full rounded-xl px-4 py-3 bg-white/10 border border-white/15 outline-none focus:border-[var(--accent)]" placeholder="nama@email.com">
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Pesan</label>
+              <textarea required name="pesan" rows="4" class="w-full rounded-xl px-4 py-3 bg-white/10 border border-white/15 outline-none focus:border-[var(--accent)]" placeholder="Tulis pesanmu..."></textarea>
+            </div>
+            <button type="submit" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-[#2a170c] bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] hover:brightness-95">
+              Kirim
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="text-xs text-[var(--muted)] mt-1"></p>
+          </form>
+        </div>
+
+        <div class="rounded-3xl p-6 md:p-8 border border-white/10 bg-white/5">
+          <h3 class="font-bold">Alamat & Jam</h3>
+          <p class="mt-2 text-[var(--muted)]">Jalan Lereng No. 10, Desa Kopi, Indonesia</p>
+          <div class="mt-5 grid grid-cols-2 gap-3">
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div class="text-xs text-[var(--muted)]">Senin–Jumat</div>
+              <div class="font-semibold">08.00–17.00</div>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div class="text-xs text-[var(--muted)]">Sabtu</div>
+              <div class="font-semibold">09.00–15.00</div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a href="https://wa.me/6285779545269" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/15 hover:bg-white/10">
+              Chat WhatsApp
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M20 3.5A10.5 10.5 0 1 0 3.2 20.7L2 24l3.4-1.2A10.5 10.5 0 1 0 20 3.5Zm-5.8 13.8c-2.7 0-5.3-1.5-6.5-3.9-.4-.8-.5-1.5-.5-2 0-.3.2-.6.4-.8l1-1c.3-.3.8-.3 1.1 0l1 1c.3.3.3.8 0 1.1l-.3.3c-.1.1-.1.3 0 .6.4 1.1 1.8 2.3 2.9 2.7.3.1.5.1.6 0l.3-.3c.3-.3.8-.3 1.1 0l1 1c.3.3.3.8 0 1.1l-1 1c-.2.2-.5.4-.8.4h-.3Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="py-8 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div class="text-sm text-[var(--muted)]">© <span id="year"></span> Kopi Gunung Lestari</div>
+        <div class="flex items-center gap-4 text-sm">
+          <a href="#home" class="text-[var(--muted)] hover:text-[var(--text)]">Home</a>
+          <a href="#profil" class="text-[var(--muted)] hover:text-[var(--text)]">Profil</a>
+          <a href="#produk" class="text-[var(--muted)] hover:text-[var(--text)]">Produk</a>
+          <a href="#kontak" class="text-[var(--muted)] hover:text-[var(--text)]">Kontak Kami</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-[60] px-4 py-3 rounded-xl border border-white/15 bg-white/10">
+    <div id="toastMsg" class="text-sm"></div>
+  </div>
+
+  <script>
+    // Tahun footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn.addEventListener('click', ()=> mobileNav.classList.toggle('hidden'));
+    mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.add('hidden')));
+
+    // Toast sederhana
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    function showToast(msg){
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      toast.style.opacity = '1';
+      setTimeout(()=>{
+        toast.style.transition = 'opacity 300ms';
+        toast.style.opacity = '0';
+        setTimeout(()=>{
+          toast.classList.add('hidden');
+          toast.style.transition = '';
+        },320);
+      },1600);
+    }
+
+    // Tombol beli menampilkan info dan toast
+    const miniInfo = document.getElementById('miniInfo');
+    const lastItem = document.getElementById('lastItem');
+    document.querySelectorAll('.buyBtn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const name = btn.getAttribute('data-name');
+        lastItem.textContent = name;
+        miniInfo.classList.remove('hidden');
+        showToast(`Ditambahkan: ${name} 🎉`);
+      });
+    });
+    document.getElementById('clearInfo').addEventListener('click', ()=>{
+      lastItem.textContent = '';
+      miniInfo.classList.add('hidden');
+      showToast('Daftar kosong.');
+    });
+
+    // Form kontak demo
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      showToast(`Terima kasih, ${data.nama}! Pesan diterima.`);
+      form.reset();
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9831d18185477e8d',t:'MTc1ODU0NDI3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
